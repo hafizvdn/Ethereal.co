@@ -1,0 +1,142 @@
+body{
+    background-color: rgb(237, 231, 226);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+div.ethereal{
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(to right,#4f615b 0%,#6db98a 100%);
+    background-clip: text;
+    color:transparent;
+}
+
+form {
+    background-color: rgba(99, 122, 115, 0.817);
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+  }
+
+  button {
+    background-color: rgb(57, 53, 54);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  header {
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+.quote {
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #637A73;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #666;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 50px auto;
+}
+
+.image-container a {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.ship {
+  flex-grow: 1;
+  margin: 20px;
+  
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+label {
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  stroke: #000000;
+  box-sizing: border-box;
+}
+
+select{
+  border-radius: 10px;
+}
+.product-image {
+  margin: 20px;
+  max-width: 200px; /* Adjust the width as needed */
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.test{
+ margin: 15px;
+}

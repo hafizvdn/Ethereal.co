@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ethereal.co</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Promotion</a>
+    </nav>
+    
+    <div class="container">
+        <form action="index4.html" class="container">
+
+         <div class="ship">
+          <h1>
+               Shipping Adress
+          </h1>
+
+        <h2>Contact</h2>
+
+        <label for="username">First Name:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Phone Number:</label>
+        <input type="number" id="password" name="password" required>
+
+        <h2>Address</h2>
+        
+        <label for="username">Address 1:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Street:</label>
+        <input type="text" id="password" name="password" required>
+
+        <label for="username">Post Code:</label>
+        <input type="tel" id="username" name="username" required>
+
+        <label for="password">State:</label>
+        <input type="text" id="password" name="password" required>
+        <div></div>
+
+
+        <h2>Payment Method</h2>
+                <label for="cars"></label>
+                <select name="cars" id="cars">
+                    <option value="Islam">Credit/Debit card</option>
+                    <option value="Muamalat">Online Banking</option>
+                    <option value="Public">COD</option>
+                </select>
+                
+                <button class="test" onclick="goToIndex2()">Go Back</button>
+                <button class="test" type="submit">Confirm</button>
+                
+            </div>
+        </form>
+        <div class="product-image" id="productImage">
+            <!-- The image will be dynamically set by JavaScript -->
+        </div>
+
+        <script>
+            function goToIndex2() {
+            window.location.href = 'index2.html';
+        }
+            // Function to get URL parameters by name
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+
+            // Read the image parameter from the URL
+            var imageParam = getUrlParameter('image');
+
+            // Set the image source
+            var productImage = document.getElementById('productImage');
+            if (imageParam) {
+                productImage.innerHTML = '<img src="' + imageParam + '" alt="Product Image">';
+            } else {
+                // Default image if no parameter is provided
+                productImage.innerHTML = '<img src="6.jpg" alt="Product Image">';
+            }
+            function goBack() {
+            window.history.back();
+        }
+        </script>
+    </div>
+</body>
+</html>

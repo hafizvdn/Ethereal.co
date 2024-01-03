@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            background-color: #f3f3f3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <h1 style="color: #45a049;">>> skip the payment event </h1>
+        <h1>Thank You</h1>
+        <p>Your order has been successfully placed. We appreciate your business!</p>
+        <button onclick="goToIndex2()">Buy Another Product</button>
+    </div>
+
+    <script>
+        function goToIndex2() {
+            window.location.href = 'index2.html';
+        }
+    </script>
+
+</body>
+</html>
