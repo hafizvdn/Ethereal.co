@@ -6,13 +6,13 @@ This is a personal milestone, and I welcome any feedback or suggestions!
 
 ✨ Project Goal & Focus
 
-The main purpose of building Ethereal.co was to gain practical, hands-on experience with foundational web technologies.
+- The main purpose of building Ethereal.co was to gain practical, hands-on experience with foundational web technologies.
 
-HTML Structure: Learning how to properly organize content using semantic tags (<header>, <section>, <footer>, etc.).
+- HTML Structure: Learning how to properly organize content using semantic tags (<header>, <section>, <footer>, etc.).
 
-CSS Styling: Understanding how to use external stylesheets, target elements with different selectors, and apply basic layout concepts like Flexbox (if used).
+- CSS Styling: Understanding how to use external stylesheets, target elements with different selectors, and apply basic layout concepts like Flexbox (if used).
 
-Web Design Basics: Practicing visual aesthetics, font choices, and color schemes.
+- Web Design Basics: Practicing visual aesthetics, font choices, and color schemes.
 
 🛠️ Technologies Used
 
@@ -38,7 +38,7 @@ You can upload the image to your repository, then link it here.
 Example: <img src="images/screenshot.png" alt="Ethereal.co landing page screenshot">
 -->
 
-[<img width="1854" height="959" alt="image" src="https://github.com/user-attachments/assets/e29b5e6c-fe8a-48f3-b9e8-e5f7bbbbe6b4" />]
+<img width="1854" height="959" alt="image" src="https://github.com/user-attachments/assets/e29b5e6c-fe8a-48f3-b9e8-e5f7bbbbe6b4" />
 
 🔗 Getting Started
 
@@ -66,4 +66,3 @@ The difference between id and class selectors in CSS.
 The basics of responsive design (if you made it look good on mobile).
 
 Made with ❤️ by Wan Ahmad
-<img width="1854" height="959" alt="image" src="https://github.com/user-attachments/assets/e29b5e6c-fe8a-48f3-b9e8-e5f7bbbbe6b4" />
