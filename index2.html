@@ -3,53 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the Ethereal.co collection.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
-    <style>
-    
-    </style>
-    <title>Ordering</title>
+    <script src="app.js" defer></script>
+    <title>Ethereal.co — Shop</title>
 </head>
 <body>
-
     <header>
-        <h1>Ethereal.co</h1>
+        <a class="wordmark" href="index2.html">Ethereal.co</a>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">Promotion</a>
-        
+    <nav aria-label="Primary">
+        <ul class="nav-list">
+            <li><a href="index2.html" aria-current="page">Shop</a></li>
+            <li><a href="cart.html">Cart<span data-cart-count></span></a></li>
+            <li><a href="login.html">Sign in</a></li>
+        </ul>
     </nav>
-    <div class="quote">
-        <h2>“The one who left it all behind and his over-whelming intensity”</h2>
-    </div>
 
-    
-    <div class="image-container">
-        <a href="index3.html?image=1.jpg">
-            <img src="1.jpg" alt="Image 1">
-        </a>
-        <a href="index3.html?image=2.jpg">
-            <img src="2.jpg" alt="Image 2">
-        </a>
-        <a href="index3.html?image=3.jpg">
-            <img src="3.jpg" alt="Image 3">
-        </a>
-    </div>
-    <div class="image-container">
-        <a href="index3.html?image=4.jpg">
-            <img src="4.jpg" alt="Image 4">
-        </a>
-        <a href="index3.html?image=5.jpg">
-            <img src="5.jpg" alt="Image 5">
-        </a>
-        <a href="index3.html?image=6.jpg">
-            <img src="6.jpg" alt="Image 6">
-        </a>
-    </div>
-    <!-- Your page content goes here -->
+    <main>
+        <h1 class="sr-only">Shop the collection</h1>
 
+        <blockquote class="quote">
+            “The one who left it all behind and his over-whelming intensity”
+        </blockquote>
+
+        <ul class="product-grid">
+            <li class="product" data-product="1.jpg">
+                <div class="product-media">
+                    <img src="1.jpg" alt="Sage and navy colour-block crewneck sweatshirt">
+                    <button type="button" class="product-add" data-add-to-cart
+                            aria-label="Add Colour-Block Crewneck to cart">Add to cart</button>
+                </div>
+                <h2 class="product-name">Colour-Block Crewneck</h2>
+                <data class="product-price" value="189.00">RM 189.00</data>
+            </li>
+
+            <li class="product" data-product="2.jpg">
+                <div class="product-media">
+                    <img src="2.jpg" alt="Black zip-up track top with striped sleeves">
+                    <button type="button" class="product-add" data-add-to-cart
+                            aria-label="Add Zip Track Top to cart">Add to cart</button>
+                </div>
+                <h2 class="product-name">Zip Track Top</h2>
+                <data class="product-price" value="219.00">RM 219.00</data>
+            </li>
+
+            <li class="product" data-product="3.jpg">
+                <div class="product-media">
+                    <img src="3.jpg" alt="White oversized T-shirt with striped shoulders">
+                    <button type="button" class="product-add" data-add-to-cart
+                            aria-label="Add Oversized Stripe Tee to cart">Add to cart</button>
+                </div>
+                <h2 class="product-name">Oversized Stripe Tee</h2>
+                <data class="product-price" value="99.00">RM 99.00</data>
+            </li>
+
+            <li class="product" data-product="4.jpg">
+                <div class="product-media">
+                    <img src="4.jpg" alt="Black ringer T-shirt with white trim" loading="lazy">
+                    <button type="button" class="product-add" data-add-to-cart
+                            aria-label="Add Ringer Tee to cart">Add to cart</button>
+                </div>
+                <h2 class="product-name">Ringer Tee</h2>
+                <data class="product-price" value="109.00">RM 109.00</data>
+            </li>
+
+            <li class="product" data-product="5.jpg">
+                <div class="product-media">
+                    <img src="5.jpg" alt="Black graphic T-shirt" loading="lazy">
+                    <button type="button" class="product-add" data-add-to-cart
+                            aria-label="Add Graphic Tee to cart">Add to cart</button>
+                </div>
+                <h2 class="product-name">Graphic Tee</h2>
+                <data class="product-price" value="89.00">RM 89.00</data>
+            </li>
+
+            <li class="product" data-product="6.jpg">
+                <div class="product-media">
+                    <img src="6.jpg" alt="Purple and navy hooded windbreaker" loading="lazy">
+                    <button type="button" class="product-add" data-add-to-cart
+                            aria-label="Add Hooded Windbreaker to cart">Add to cart</button>
+                </div>
+                <h2 class="product-name">Hooded Windbreaker</h2>
+                <data class="product-price" value="259.00">RM 259.00</data>
+            </li>
+        </ul>
+    </main>
 </body>
 </html>

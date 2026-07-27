@@ -3,97 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Complete your Ethereal.co order.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Ethereal.co — Checkout</title>
 </head>
 <body>
     <header>
-        <h1>Ethereal.co</h1>
+        <a class="wordmark" href="index2.html">Ethereal.co</a>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">Promotion</a>
+    <nav aria-label="Primary">
+        <ul class="nav-list">
+            <li><a href="index2.html">Shop</a></li>
+            <li><a href="cart.html">Cart<span data-cart-count></span></a></li>
+            <li><a href="login.html">Sign in</a></li>
+        </ul>
     </nav>
-    
-    <div class="container">
-        <form action="index4.html" class="container">
 
-         <div class="ship">
-          <h1>
-               Shipping Adress
-          </h1>
+    <main class="checkout">
+        <form class="checkout-form" data-next="index4.html" data-clear-cart method="post">
+            <h1>Checkout</h1>
 
-        <h2>Contact</h2>
+            <h2 class="section-heading">Contact</h2>
 
-        <label for="username">First Name:</label>
-        <input type="text" id="username" name="username" required>
+            <div class="field">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name"
+                       autocomplete="given-name" aria-describedby="first-name-error" required>
+                <p class="field-error" id="first-name-error">Enter your first name.</p>
+            </div>
 
-        <label for="password">Phone Number:</label>
-        <input type="number" id="password" name="password" required>
+            <div class="field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone"
+                       autocomplete="tel" aria-describedby="phone-error" required>
+                <p class="field-error" id="phone-error">Enter a phone number we can reach you on.</p>
+            </div>
 
-        <h2>Address</h2>
-        
-        <label for="username">Address 1:</label>
-        <input type="text" id="username" name="username" required>
+            <h2 class="section-heading">Shipping address</h2>
 
-        <label for="password">Street:</label>
-        <input type="text" id="password" name="password" required>
+            <div class="field">
+                <label for="address1">Address line 1</label>
+                <input type="text" id="address1" name="address1"
+                       autocomplete="address-line1" aria-describedby="address1-error" required>
+                <p class="field-error" id="address1-error">Enter your address.</p>
+            </div>
 
-        <label for="username">Post Code:</label>
-        <input type="tel" id="username" name="username" required>
+            <div class="field">
+                <label for="street">Address line 2</label>
+                <input type="text" id="street" name="street" autocomplete="address-line2">
+            </div>
 
-        <label for="password">State:</label>
-        <input type="text" id="password" name="password" required>
-        <div></div>
+            <div class="field">
+                <label for="postcode">Post code</label>
+                <input type="text" id="postcode" name="postcode" inputmode="numeric"
+                       autocomplete="postal-code" aria-describedby="postcode-error" required>
+                <p class="field-error" id="postcode-error">Enter your post code.</p>
+            </div>
 
+            <div class="field">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state"
+                       autocomplete="address-level1" aria-describedby="state-error" required>
+                <p class="field-error" id="state-error">Enter your state.</p>
+            </div>
 
-        <h2>Payment Method</h2>
-                <label for="cars"></label>
-                <select name="cars" id="cars">
-                    <option value="Islam">Credit/Debit card</option>
-                    <option value="Muamalat">Online Banking</option>
-                    <option value="Public">COD</option>
+            <h2 class="section-heading">Payment method</h2>
+
+            <div class="field">
+                <label for="payment-method">How would you like to pay?</label>
+                <select name="payment-method" id="payment-method">
+                    <option value="card">Credit/debit card</option>
+                    <option value="online-banking">Online banking</option>
+                    <option value="cod">Cash on delivery</option>
                 </select>
-                
-                <button class="test" onclick="goToIndex2()">Go Back</button>
-                <button class="test" type="submit">Confirm</button>
-                
+            </div>
+
+            <div class="actions">
+                <a class="button button-secondary" href="cart.html">Back to Cart</a>
+                <button type="submit" data-confirm-order>Confirm Order</button>
             </div>
         </form>
-        <div class="product-image" id="productImage">
-            <!-- The image will be dynamically set by JavaScript -->
-        </div>
 
-        <script>
-            function goToIndex2() {
-            window.location.href = 'index2.html';
-        }
-            // Function to get URL parameters by name
-            function getUrlParameter(name) {
-                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-                var results = regex.exec(location.search);
-                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-            }
+        <aside class="order-summary">
+            <h2 class="section-heading">Order summary</h2>
 
-            // Read the image parameter from the URL
-            var imageParam = getUrlParameter('image');
+            <ul class="order-lines" id="order-lines"></ul>
 
-            // Set the image source
-            var productImage = document.getElementById('productImage');
-            if (imageParam) {
-                productImage.innerHTML = '<img src="' + imageParam + '" alt="Product Image">';
-            } else {
-                // Default image if no parameter is provided
-                productImage.innerHTML = '<img src="6.jpg" alt="Product Image">';
-            }
-            function goBack() {
-            window.history.back();
-        }
-        </script>
-    </div>
+            <p class="order-total" id="order-total-row" hidden>
+                <span>Total</span>
+                <strong id="order-total">RM 0.00</strong>
+            </p>
+
+            <p class="order-empty" id="order-empty">
+                Your cart is empty. <a href="index2.html">Browse the collection</a>.
+            </p>
+        </aside>
+    </main>
 </body>
 </html>

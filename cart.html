@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Ethereal.co cart.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Ethereal.co — Cart</title>
+</head>
+<body>
+    <header>
+        <a class="wordmark" href="index2.html">Ethereal.co</a>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul class="nav-list">
+            <li><a href="index2.html">Shop</a></li>
+            <li><a href="cart.html" aria-current="page">Cart<span data-cart-count></span></a></li>
+            <li><a href="login.html">Sign in</a></li>
+        </ul>
+    </nav>
+
+    <main class="cart">
+        <h1>Your cart</h1>
+
+        <ul class="cart-list" id="cart-list" hidden></ul>
+
+        <p class="cart-empty" id="cart-empty">
+            Your cart is empty. <a href="index2.html">Browse the collection</a>.
+        </p>
+
+        <div class="cart-summary" id="cart-summary" hidden>
+            <p class="cart-total">Total <strong id="cart-total">RM 0.00</strong></p>
+            <div class="cart-actions">
+                <a class="button button-secondary" href="index2.html">Keep Shopping</a>
+                <a class="button" href="index3.html">Checkout</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
